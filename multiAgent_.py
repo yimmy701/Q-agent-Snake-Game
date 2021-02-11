@@ -220,7 +220,9 @@ class ManualPlayer():
                     self.turn(left)
                 elif event.key == pygame.K_RIGHT:
                     self.turn(right)
-    
+                    
+                    
+## Note: There is a bug that hasn't been fixed that causes RandomSnake and AppleDirectingSnake to ONLY move if curser was constantly moving on the game interface.
 class RandomSnake(ManualPlayer):
     def takeAction(self):
         for event in pygame.event.get():
